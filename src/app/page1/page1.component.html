@@ -17,12 +17,15 @@
     
         <div class="form-group">
                 <label>Email adress : </label>
-                <input class="form-control" ngModel name="email" #email="ngModel" type="email" placeholder="Enter email" required>
-        </div>
+                <input class="form-control" ngModel name="email" #email="ngModel" type="email" placeholder="Enter email" required email>
+                <!-- <div *ngIf=" !email.touched && form.controls.email._parent.status">Email </div>
+                
+                <div *ngIf=" email.touched && form.controls.email._parent.status">Email must be a valid email address </div> -->
+         </div>
 
         <div class="form-group">
                 <label>Number : </label>
-                <input min="10" max="10"  class="form-control" ngModel name="number" #number="ngModel" type="Number" placeholder="Enter Mobile Number" required>
+                <input minlength="10" class="form-control" ngModel name="number" #number="ngModel" type="Number" placeholder="Enter Mobile Number" required>
         </div>
    
        <button type="submit" class="btn btn-primary">Next</button>
