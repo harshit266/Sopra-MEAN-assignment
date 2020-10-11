@@ -1,0 +1,32 @@
+
+<form #form="ngForm" (ngSubmit)="saveValue(form.value)">
+    <div class="container">
+      
+      
+
+       <div class="form-group">
+          <label>First Name : </label>
+          <input class="form-control" ngModel name="firstName" #firstName="ngModel" type="text" placeholder="Enter first name" required>
+       </div>
+      
+    
+        <div class="form-group">
+        <label>Last Name : </label>
+        <input class="form-control" ngModel name="lastName" #lastName="ngModel" type="text" placeholder="Enter last name" required>
+        </div>
+    
+        <div class="form-group">
+                <label>Email adress : </label>
+                <input class="form-control" ngModel name="email" #email="ngModel" type="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="form-group">
+                <label>Number : </label>
+                <input min="10" max="10"  class="form-control" ngModel name="number" #number="ngModel" type="Number" placeholder="Enter Mobile Number" required>
+        </div>
+   
+       <button type="submit" class="btn btn-primary">Next</button>
+       
+    </div>
+   
+ </form>
